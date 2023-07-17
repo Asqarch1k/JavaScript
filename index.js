@@ -2312,23 +2312,40 @@ console.log(foo(arr));*/
 // // for (const num in counts) {
 // //   if (counts[num] < 1) {
 // //     lessUsedElements.push(parseInt(num));
-// //   }
-// // }
+// // //   }
+// // // }
 
-// // console.log(lessUsedElements);
+// // // console.log(lessUsedElements);
 
-// // const matches = [
-// //   [1, 3],
-// //   [2, 3],
-// //   [1, 6],
-// //   [5, 6],
-// //   [5, 7],
-// //   [4, 1],
-// //   [4, 8],
-// //   [4, 9],
-// //   [10, 4],
-// //   [10, 9],
-// // ];
+// // // const matches = [
+// // //   [1, 3],
+// // //   [2, 3],
+// // //   [1, 6],
+// // //   [5, 6],
+// // //   [5, 7],
+// // //   [4, 1],
+// // //   [4, 8],
+// // //   [4, 9],
+// // //   [10, 4],
+// // //   [10, 9],
+// // // ];
+// // // const matches = [
+// // //   [1, 3],
+// // //   [2, 3],
+// // //   [3, 6],
+// // //   [5, 6],
+// // //   [5, 7],
+// // //   [4, 5],
+// // //   [4, 8],
+// // //   [4, 9],
+// // //   [10, 4],
+// // //   [10, 9],
+// // // ];
+
+// // // const zeroIndexedMatches = matches.filter(match => match.includes(0));
+
+// // // console.log(zeroIndexedMatches);
+
 // // const matches = [
 // //   [1, 3],
 // //   [2, 3],
@@ -2342,58 +2359,637 @@ console.log(foo(arr));*/
 // //   [10, 9],
 // // ];
 
-// // const zeroIndexedMatches = matches.filter(match => match.includes(0));
+// // function foo(matches) {
+// //   const first = {};
+// //   const second = {};
 
-// // console.log(zeroIndexedMatches);
+// //   for (const i of matches) {
+// //     first[i[0]] = first[i[0]] + 1 || 1;
+// //     second[i[1]] = second[i[1]] + 1 || 1;
+// //   }
 
-// const matches = [
-//   [1, 3],
-//   [2, 3],
-//   [3, 6],
-//   [5, 6],
-//   [5, 7],
-//   [4, 5],
-//   [4, 8],
-//   [4, 9],
-//   [10, 4],
-//   [10, 9],
-// ];
+// //   const arr1 = Object.keys(first).filter((item) => second[item] === undefined);
+// //   const arr2 = Object.keys(second).filter((item) => second[item] === 1);
+// //   return [arr1, arr2];
+// // }
+// // console.log(foo(matches));
 
-// function foo(matches) {
-//   const first = {};
-//   const second = {};
+// // const list = document.querySelector(".list");
+// // const obj = [
+// //   {
+// //     id: 1,
+// //     name: "product 1",
+// //     image: "1.png",
+// //     price: 20000,
+// //   },
 
-//   for (const i of matches) {
-//     first[i[0]] = first[i[0]] + 1 || 1;
-//     second[i[1]] = second[i[1]] + 1 || 1;
+// //   {
+// //     id: 1,
+// //     name: "product 2",
+// //     image: "2.png",
+// //     price: 150000,
+// //   },
+
+// //   {
+// //     id: 1,
+// //     name: "product 1",
+// //     image: "1.png",
+// //     price: 20000,
+// //   },
+// // ];
+// // debugger
+
+// // var fulname = "John";
+// // console.log(foo);
+// // function foo(name) {
+// //   var tex = "assalom " + name;
+// //   return tex;
+// // }
+
+// // var fullName = "John";
+// // console.log(this.fullName);
+
+// // debugger
+// // foo()
+// // boo()
+// // function foo() {
+// //   console.log('hello world');
+// // }
+
+// // function boo() {
+// //   console.log('salom dunyo');
+// // }
+
+// // const school = {
+// //   books: ["Alisher", "buyuk"],
+// //   schoolNumber: 21,
+// //   schoolName: "Burxon",
+// //   bookAuthorss: ["oybek", "kamron"],
+// // };
+
+// // const [first, first1, first2] = [
+// //   ...school.books,
+// //   school.bookAuthorss,
+// //   ...school.schoolName,
+// //   school.schoolNumber
+// // ];
+// // console.log(first, "--", first1, '---', first2);
+
+// // const arr = ["aziza", "dunyo", "xabar", "madam"];
+
+// function isPalindrome(word) {
+//   const reversed = word.split("").reverse().join("");
+//   return word === reversed;
+// }
+
+// function findPalindromes(array) {
+//   const palindromes = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (isPalindrome(array[i])) {
+//       palindromes.push(array[i]);
+//     }
+//   }
+//   return palindromes;
+// }
+
+// const palindromesArray = findPalindromes(arr);
+// console.log(palindromesArray);
+
+// function foo(str) {
+//   let newStr = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     newStr += str[i];
+//   }
+//   return newStr === str;
+// }
+
+// const arr = ["aziza", "dunyo", "xabar", "madam"];
+
+// for (let item of arr) {
+//   if (foo(item)) {
+//     console.log(item);
+//   }
+// }
+
+// // Challenge 1
+// function countdown(n) {
+//   //Check if n is 0(exclusive)
+// 	if(n === 0) return;
+//   //Else, print the value of n and invoke recursive call
+//   console.log(n);
+//   return countdown(n-1);
+// }
+
+// // To check if you've completed it, uncomment these console.logs!
+// // countdown(5);
+// // countdown(10);
+
+// // Challenge 2
+// //Create def. parameter, index and assign to 0
+// function sum(array, index = 0) {
+//   //Base case: if index reaches the last valid index
+// 	if(index === array.length - 1) return array[array.length - 1];
+
+//   return array[index] + sum(array, index + 1);
+// }
+
+// // uncomment these to check your work
+//  // console.log(sum([1,1,1])); // -> returns 3
+//  // console.log(sum([1,2,3,4,5,6])); // -> returns 21
+
+// // Challenge 3
+// function palindrome(string) {
+// 	// Use Regex to sanitize input string for testcases.
+//   string = string.replace(/\W/ig, '').toLowerCase();
+
+//   //Base case 1: If we've reached the point where the string's length is less than or equal to 1, return true
+//   if(string.length <= 1) return true;
+
+//   //Base case 2: If the beginning and ending characters of the string don't match up, return false
+//   if(string[0] !== string[string.length - 1]) return false
+
+//   //Recursive case: call palindrome , but pass in a sliced version of the string w/ first and last chars removed.
+//   return palindrome(string.slice(1,-1))
+// }
+
+// // console.log(palindrome("Anne, I vote more cars race Rome-to-Vienna")); //-> true
+// // console.log(palindrome("llama mall")); //-> true
+// // console.log(palindrome("jmoney")); //-> false
+
+// // Challenge 4
+
+// /* Prime numbers cannot be
+// 	- Negative
+//   - Divisble by any number but by themselves and 1.
+// */
+
+// function isPrime(num, testNum = num - 1) {
+//   //Take care of all negative numbers.
+//   if(num < 2) return false;
+//   //If we've reached the point that testNum is 1, we know that num is prime.
+//   if(testNum === 1 || num === 2) return true;
+//   //Check if num is divisible by testNum
+//   if(num % testNum === 0) return false
+
+//   //Recursive call: invoke isPrime, but decrement testNum by 1
+//   return isPrime(num, testNum - 1)
+// }
+
+// console.log(isPrime(1)); //-> false
+// // console.log(isPrime(2)); //-> true
+// // console.log(isPrime(3)); //-> true
+// // console.log(isPrime(4)); //-> false
+
+// //Challenge 5
+// function pathFinder(obj, arr, index = 0) {
+// 	//Iterate through the keys of the passed in object,
+//   //checking if each key's value matches with the array's values
+//   //If each key corresponds to this value, return the final key's value(in this case, we expect a string)
+//   if(typeof obj[arr[index]] === "object"){
+//     return pathFinder(obj[arr[index]], arr, index + 1);
+//   }
+//   else if(typeof obj[arr[index]] === "string"){
+//     return obj[arr[index]];
+//   }
+//   else {
+//     return;
+//   }
+// }
+
+// // const obj = { first: { second: { third: "finish" } }, second: { third: "wrong" } };
+// // const arr = ["first", "second", "third"];
+// // console.log(pathFinder(obj, arr));   //-> "finish"
+
+// //Challenge 6
+
+// //Create def. paramater to hold the de-nested elements.
+// function flattenRecursively(arr, newArr = [], index = 0) {
+//   //We're looking to de-nest our array to only one level of nesting - the outer array
+
+//   //Plan: We can check to see if the current element is undefined,
+//   //if so, we've reached the end of the array and we can return
+//   if(arr[index] === undefined) return newArr;
+
+//   //if the current element is an array, let's call flattenRecursively w/ the sub-array
+//   if(Array.isArray(arr[index])) {
+//     return flattenRecursively(arr[index], newArr, 0)
+//   }
+// 	//Else, let's push the non-array el to our newArr and continue
+//   //the recursive call.
+//   else{
+//     newArr.push(arr[index]);
+//     return flattenRecursively(arr, newArr, index + 1)
+//   }
+// }
+
+// //console.log(flattenRecursively([1, [2, 3, [4]]])); //-> [1, 2, 3, 4]
+// //console.log(flattenRecursively([1, {}, [3, [[4]]]])); //-> [1, {}, 3, 4]
+
+// //Challenge 7
+// function findInOrderedSet(arr, target) {
+//   if(arr[0] === target) return true;
+//   else if(arr[1] > target) return false;
+//   return findInOrderedSet(arr.slice(1), target)
+// }
+// //Bonus - Implement a binary search to prevent a continous search
+
+// const nums = [1, 4, 6, 7, 9, 17, 45];
+// // console.log(findInOrderedSet(nums, 4));  //-> true
+// // console.log(findInOrderedSet(nums, 2));  //-> false
+
+// //Challenge 8
+// function countWaysToReachNthStair(n) {
+
+// // Similiar to the fibonacci seq, we have only two possible routes for this question. For any positive integer, n, we can decrement by either 1 or 2 until we finally reach either 1 or 2. At that point - we can make use of the stack frame to keep track of the routes.
+
+//   if(n === 1) return 1;
+
+//   if(n === 2) return 2;
+//   console.log('n is now', n)
+//   return countWaysToReachNthStair(n - 1) + countWaysToReachNthStair(n - 2)
+
+//   //For optimization, make use of a cache to store previous calculations.
+// }
+
+// // console.log(countWaysToReachNthStair(1)) //-> 1 (only one way to climb 1 stair)
+// // console.log(countWaysToReachNthStair(2)) //-> 2 ((1, 1), (2))
+// //console.log(countWaysToReachNthStair(4)) //-> 5 ((1, 1, 1, 1), (1, 1, 2), (2, 1, 1), (2, 2))
+
+// //Challenge 9
+// function getPermutations(arr, index = 0) {
+
+// }
+
+// console.log(getPermutations([1, 2])) //-> [[1, 2], [2, 1]]
+//  console.log(getPermutations([1, 2, 3])) //-> [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+
+// //Challenge 10
+// function getRangeBetween(x, y, outputArr = []) {
+//   //Note: x and y are exclusive
+//   //Base case: Starting from x, if we reach y, let's return our arr
+//   if(x === y - 1) return outputArr;
+//   outputArr.push(x + 1);
+//   return getRangeBetween(x + 1, y, outputArr)
+// }
+
+// // console.log(getRangeBetween(2, 9)) //-> [3, 4, 5, 6, 7, 8]
+// // console.log(getRangeBetween(-5, 5)) //-> [-4, -3, -2, 1, 0, 1, 2, 3, 4]
+
+// // ----------------------------------this-----------------------------------
+// var author = 'nimadir';
+// var bookNme = 'yanaNimadir';
+
+// function showInfo(nima, ikki) {
+//     console.log(`
+//     Kitob nomi: ${this.bookNme}
+//     `);
+// }
+
+// const showInfoWithArrowFunction = () =>{
+//   console.log(`
+//     Kitob nomi: ${this.bookNme}
+//     `);
+// }
+
+// const book1 = {
+//   author: "abdulla",
+//   bookname: "otgan kunlar",
+//   showInfo(){
+//     console.log(`kitob nomi: ${author}`);
+//   }
+// };
+
+// showInfo.call(book1,1,2)
+
+// ----------------------------------Time vaqtdan keyin chiqishi-----------------------------
+
+// function foo() {
+//   // console.log(new Date().getSeconds());
+//   console.log('salom dunyo');
+// }
+
+// setTimeout(foo, 4000)
+// setInterval(foo, 2000);
+
+// setTimeout(() => {
+//   console.log("salom");
+// }, 2000);
+
+// const timeOut = setInterval(() => {
+//   console.log(`uzbekistan`);
+// })
+
+// setInterval(() => {
+//   clearInterval(timeOut)
+// }, 1000);
+
+// --------------------------------------------------Timer------------------------------
+
+// const minute = document.getElementById("minute");
+// const second = document.getElementById("second");
+
+// let mins = 2;
+// let seconds = 59;
+
+// minute.innerHTML = ` ${mins < 10 ? "0" + mins : mins}`;
+// second.innerHTML = `${seconds < 10 ? "0" + seconds : seconds}`;
+
+// const interval = setInterval(() => {
+//   // minute.innerHTML = mins;
+//   // seconds -= 1;
+//   // second.innerHTML = seconds;
+
+//   if (second === 0 && mins - 1 >= 0) {
+//     mins = mins - 1;
+//     seconds = 60;
 //   }
 
-//   const arr1 = Object.keys(first).filter((item) => second[item] === undefined);
-//   const arr2 = Object.keys(second).filter((item) => second[item] === 1);
-//   return [arr1, arr2];
+//   if (seconds === 0 && mins === 0) {
+//     clearInterval(interval);
+//     return;
+//   }
+
+//   minute.innerHTML = `${mins < 10 ? "0" + mins : mins}`;
+//   seconds -= 1;
+//   second.innerHTML = `${seconds < 10 ? "0" + seconds : seconds}`;
+// }, 10);
+
+/*const minute = document.getElementById("minute");
+const second = document.getElementById("second");
+
+let mins = 1;
+let seconds = 0;
+
+minute.innerHTML = `${mins < 10 ? "0" + mins : mins}`;
+second.innerHTML = `${seconds < 10 ? "0" + seconds : seconds}`;
+
+const interval = setInterval(() => {
+  if (seconds === 0 && mins - 1 >= 0) {
+    mins = mins - 1;
+    seconds = 15;
+  }
+
+  if (seconds === 0 && mins === 0) {
+    clearInterval(interval);
+    return;
+  }
+  minute.innerHTML = `${mins < 10 ? "0" + mins : mins}`;
+  seconds -= 1;
+  second.innerHTML = `${seconds < 10 ? "0" + seconds : seconds}`;
+}, 1000);
+
+ --------------------------------------------------------------------------*/
+
+// const s = "daabcbaabcbc";
+// const part = "abc";
+// // const res = s.replaceAll(part, "");
+// // const res1 = res.replaceAll(part, "");
+// // console.log(res1);
+
+// function foo(str) {
+//   if (str.includes(part)) {
+//     return foo(str.replaseAll(part, ""));
+//   }
 // }
-// console.log(foo(matches));
+// console.log(foo(s));
 
-const list = document.querySelector(".list");
-const obj = [
-  {
-    id: 1,
-    name: "product 1",
-    image: "1.png",
-    price: 20000,
-  },
+// const tex = 'a1b1c1d1'
 
-  {
-    id: 1,
-    name: "product 2",
-    image: "2.png",
-    price: 150000,
-  },
+// function foo() {
+//   const res = tex.match(/[a-z]/gi).length
+//   return 2** res
+// }console.log(foo());
 
-  {
-    id: 1,
-    name: "product 1",
-    image: "1.png",
-    price: 20000,
-  },
-];
+/*|
+--------------------------------------------------Class OOP------------------------------------
+|*/
+
+// const samsung = {
+//   title: "samsung",
+//   created: '2021',
+//   prise: '1000$',
+//   memor
+// };
+
+// class Phone {
+//   constructor(title, createdAt, price, isTypeC, memory) {
+//     this.title = title;
+//     this.createdAt = createdAt;
+//     this.price = price;
+//     this.isTypeC = isTypeC;
+//     this.memory = memory;
+//   }
+
+//   showInfo() {
+//     console.log(
+//       `Modeli: ${this.title}
+//       Narhi: ${this.price}
+//       Quvvatlagich: ${this.isTypeC ? "type c" : "type c emas"}
+//       Xotirasi: ${this.memory}
+//       Yili: ${this.createdAt}
+//       `
+//     );
+//   }
+// }
+
+// const redmi = new Phone("Redmi", 2021, 1200, false, 64);
+// const samsung = new Phone("Samsung galaxy", 2022, 1300, false, 128);
+
+// redmi.showInfo();
+// samsung.showInfo();
+
+// class Alive {
+//   eat() {
+//     console.log(this.name + " Eating");
+//   }
+// }
+
+// class Person extends Alive {
+//   constructor() {
+//     super();
+//     this.name = "Vali";
+//   }
+// }
+
+// class Dog extends Alive {
+//   constructor() {
+//     super();
+//     this.name = "Bobek";
+//   }
+// }
+
+// const Bobek = new Dog();
+// const Vali = new Person();
+
+// Bobek.eat();
+// Vali.eat();
+
+/*class Bino {
+  constructor(nomi, etaj, nowEtaj) {
+    this.nomi = nomi;
+    this.etaj = etaj;
+    this.nowEtaj = nowEtaj;
+  }
+  showInfo() {
+    console.log(
+      `BinoTuri: ${this.nomi}
+      QavatSoni: ${this.etaj}
+       Hozirda: ${this.nowEtaj}
+       liftTurganJoy: ${this.lift()}
+      `
+    );
+  }
+  lift() {
+    return this.etaj > this.nowEtaj ? this.nowEtaj + 1 : 1;
+  }
+}
+
+const maktab = new Bino("Maktab", 4, 4);
+const kollet = new Bino("Kollet", 6, 3);
+const universitet = new Bino("Universitet", 7, 4);
+
+maktab.showInfo();
+kollet.showInfo();
+universitet.showInfo();*/
+
+// class Person {
+//   fName = "";
+//   lName = "";
+
+//   constructor(ismi, familiyasi) {
+//     this.fName = ismi;
+//     this.lName = familiyasi;
+//   }
+
+//    set changeName(newName){
+//     this.fName = newName;
+//   }
+
+//   get getFullName() {
+//     return this.fName + " " + this.lName;
+//   }
+// }
+
+// const person1 = new Person("John", "Doe");
+// person1.changeName = "gishmat";
+// const userningIsmi = person1.getFullName;
+// console.log(userningIsmi);
+
+/*class Kompyuter {
+  constructor(nomi, narhi, xotirasi) {
+    this.nomi = nomi;
+    this.narhi = narhi;
+    this.xotirasi = xotirasi;
+  }
+
+  showInfo() {
+    console.log(
+      `Kompyuter nomi: ${this.nomi}
+       Narhi: ${this.narhi}
+       xotirasi: ${this.xotirasi}
+      `
+    );
+  }
+}
+
+const HP = new Kompyuter("HP", 800, 512);
+const Lenovo = new Kompyuter("Lenovo", 700, 256);
+const Mac = new Kompyuter("Mac", 1100, 1000);
+
+HP.showInfo();
+Lenovo.showInfo();
+Acer.showInfo();*/
+
+// ----------------------------------23-dars-------------------------
+
+/*const result = [];
+function foo(a) {
+  result.push(a);
+  return foo;
+}
+
+// console.log(foo(result++));
+
+const foo = (a) => (b) => b ? foo(a + b) : a;
+console.log(foo(1)(3)(5)(7)());*/
+
+/*class student {
+  name = "";
+  #ball = [];
+  #subjects = [];
+  #isPass = true;
+  course = 1;
+
+  constructor(name, ball, subjects, isPass, course) {
+    this.#ball = ball;
+    this.#subjects = subjects;
+    this.#isPass = isPass;
+    this.name = name;
+  }
+
+  get getStudentBall (){
+    return this.#ball
+  }
+}
+
+const John = new student (
+  'John',[5,55,7],['Tarix', 'Matematika', 'english'],
+  3
+)
+console.log(John.getStudentBall);*/
+
+class Student {
+  #contact = [{ name: "john", phoneNumber: "3123123", id: 12684952157 }];
+  name = "";
+  #phoneNumber = "";
+
+  constructor(name, phoneNumber) {
+    this.name = name;
+    this.#phoneNumber = phoneNumber;
+  }
+
+  set addContact(newContact) {
+    if (this.#contact.length < 10) {
+      newContact.id = Math.random() * 1000;
+      this.contact.push(newContact);
+    } else {
+      throw console.Error("Contactlar soni oshib ketdi");
+    }
+  }
+
+  get getAllContact() {
+    return this.#contact;
+  }
+
+  set edit({ id, phoneNumber, name }) {
+    const newContact = this.#contact.filter((item) => item, id !== id);
+    const editedContac = this.#contact.find((contact) => contact.id === id);
+    editedContac.phoneNumber = phoneNumber;
+    editedContac.name = name;
+    this.#contact = [...newContact, editedContac];
+  }
+}
+
+const user1 = new Student("muhammadiy", "99999999");
+
+user1.addContact = {
+  name: "john1",
+  phoneNumber: "312525",
+};
+
+user1.addContact = {
+  name: "john2",
+  phoneNumber: "3123525",
+};
+
+user1.addContact = {
+  name: "john2",
+  phoneNumber: "3125425",
+};
+
+user1.edit = {
+  id: 4684453135463,
+  phoneNumber: "111",
+  name: "due",
+};
+console.log(user1.getAllContact);
