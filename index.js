@@ -2938,58 +2938,411 @@ const John = new student (
 )
 console.log(John.getStudentBall);*/
 
-class Student {
-  #contact = [{ name: "john", phoneNumber: "3123123", id: 12684952157 }];
-  name = "";
-  #phoneNumber = "";
+// class Student {
+//   #contact = [{ name: "john", phoneNumber: "3123123", id: 12684952157 }];
+//   name = "";
+//   #phoneNumber = "";
 
-  constructor(name, phoneNumber) {
-    this.name = name;
-    this.#phoneNumber = phoneNumber;
+//   constructor(name, phoneNumber) {
+//     this.name = name;
+//     this.#phoneNumber = phoneNumber;
+//   }
+
+//   set addContact(newContact) {
+//     if (this.#contact.length < 10) {
+//       newContact.id = Math.random() * 1000;
+//       this.contact.push(newContact);
+//     } else {
+//       throw console.Error("Contactlar soni oshib ketdi");
+//     }
+//   }
+
+//   get getAllContact() {
+//     return this.#contact;
+//   }
+
+//   set edit({ id, phoneNumber, name }) {
+//     const newContact = this.#contact.filter((item) => item, id !== id);
+//     const editedContac = this.#contact.find((contact) => contact.id === id);
+//     editedContac.phoneNumber = phoneNumber;
+//     editedContac.name = name;
+//     this.#contact = [...newContact, editedContac];
+//   }
+// }
+
+// const user1 = new Student("muhammadiy", "99999999");
+
+// user1.addContact = {
+//   name: "john1",
+//   phoneNumber: "312525",
+// };
+
+// user1.addContact = {
+//   name: "john2",
+//   phoneNumber: "3123525",
+// };
+
+// user1.addContact = {
+//   name: "john2",
+//   phoneNumber: "3125425",
+// };
+
+// user1.edit = {
+//   id: 4684453135463,
+//   phoneNumber: "111",
+//   name: "due",
+// };
+// console.log(user1.getAllContact);
+
+// ---------------------------------------------------------------------------------
+
+// class Student {
+//   name = ''
+//   #ball = []
+//   course = 1
+//   constructor(name, ball) {
+//     this.name = name
+//     this.#ball = ball
+//   }
+//   get studentBalls() {
+//     return this.#ball
+//   }
+//   addStudentBall(ball) {
+//     if (this.#ball.length >= 10) {
+//       throw Error("Xotira to'lgan")
+//     }
+//     this.#ball.push(ball)
+//   }
+// }
+
+// const MuhammadAliy = new Student('MuhammadAliy', [])
+
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+// MuhammadAliy.addStudentBall(3)
+
+// console.log(MuhammadAliy.studentBalls)
+
+// console.log(new Date().getTime())
+// const filterBtn = document.getElementById('filterBtn')
+
+// function changeFilter() {
+//   user1.changeFilterByName = !user1.sortByName
+//   filterBtn.textContent = 'Filter ' + (user1.sortByName ? 'A-Z' : 'Z-A')
+
+//   console.log(user1.getAllContacts)
+// }
+
+// class Student {
+//   #contact = [{ name: "john", phoneNumber: "3123123", id: 1689600080137 }];
+//   name = "";
+//   #phoneNumber = "";
+//   sortByName = false;
+
+//   constructor(name, phoneNumber) {
+//     this.name = name;
+//     this.#phoneNumber = phoneNumber;
+//   }
+
+//   set addContact(newContact) {
+//     if (this.#contact.length < 10) {
+//       newContact.id = Math.random() * 100000;
+//       this.#contact.push(newContact);
+//     } else {
+//       throw Error("Contactlar soni oshib ketdi");
+//     }
+//   }
+
+//   get getAllContacts() {
+//     return this.#contact.sort((a, b) => {
+//       if (this.sortByName) {
+//         return a.name.localeCompare(b.name);
+//       } else {
+//         return b.name.localeCompare(a.name);
+//       }
+//     });
+//   }
+
+//   set deleteContact(id) {
+//     this.#contact = this.#contact.filter((item) => item.id !== id);
+//     console.log(this.#contact);
+//   }
+
+//   set changeFilterByName(newValue) {
+//     this.sortByName = newValue;
+//   }
+//   get sortByName() {
+//     return this.sortByName;
+//   }
+
+//   set edit({ id, phoneNumber, name }) {
+//     const newContacts = this.#contact.filter((item) => item.id !== id);
+//     const editedContact = this.#contact.find((contact) => contact.id === id);
+//     editedContact.phoneNumber = phoneNumber;
+//     editedContact.name = name;
+//     this.#contact = [...newContacts, editedContact];
+//   }
+// }
+
+// const user1 = new Student("MuhammadAliy", "999999");
+
+// user1.addContact = {
+//   name: "john1",
+//   phoneNumber: "3123123",
+// };
+
+// user1.addContact = {
+//   name: "john2",
+//   phoneNumber: "31223123",
+// };
+
+// user1.edit = {
+//   id: 1689600080137,
+//   phoneNumber: "111",
+//   name: "Doe",
+// };
+
+// // class Utils {
+// //   siteName = "Nimadir";
+// //   static changeFilter() {
+// //     user1.changeFilterByName = !user1.sortByName;
+// //     filterBtn.textContent = "Filter " + (user1.sortByName ? "A-Z" : "Z-A");
+// //     console.log(user1.getAllContacts);
+// //   }
+// // }
+
+// // const utils = new Utils();
+
+// // // // ------------------------------------------
+
+// class Kutubxona {
+//   constructor(ism) {
+//     this.ism = ism;
+//     this.kitoblar = [];
+//     this.kitapZamanlari = [];
+//     this.bugun = new Date(); // Bugunlik sana
+//   }
+
+// //   kitapEkle(kitap) {
+// //     this.kitoblar.push(kitap);
+// //     const teslimTarihi = new Date(this.bugun.getTime() + (3 * 24 * 60 * 60 * 1000)); // 3 kun keyingi sanasi
+// //     this.kitapZamanlari.push({
+// //       kitap: kitap,
+// //       teslimTarihi: teslimTarihi.toISOString().split('T')[0],
+// //       olibOlishSanasi: this.bugun.toISOString().split('T')[0] // Bugunlik sanasi
+// //     });
+// //   }
+
+// //   kitapSil(kitap) {
+// //     const indeks = this.kitoblar.findIndex((element) => element.kitap === kitap);
+// //     if (indeks > -1) {
+// //       this.kitoblar.splice(indeks, 1);
+// //       this.kitapZamanlari.splice(indeks, 1);
+// //     }
+// //   }
+
+// //   kitaplarniKorsat() {
+// //     this.kitoblar.forEach((kitap, indeks) => {
+// //       const zaman = this.kitapZamanlari[indeks];
+// //       console.log(`${indeks + 1}. ${zaman.kitap} (Olingan: ${zaman.olibOlishSanasi}, Topshirilgan: ${zaman.teslimTarihi} )`);
+// //     });
+// //   }
+// // }
+
+// // const kutubxona = new Kutubxona("Namuna Kutubxonasi");
+
+// // // Kitob qo'shish (3 kun keyingi sanasi bilan)
+// // kutubxona.kitapEkle("Kitob 1");
+// // // kutubxona.kitapEkle("Kitob 2");
+// // kutubxona.kitapEkle("Kitob 3");
+
+// // // Kitoblarni ro'yxatlash
+// // kutubxona.kitaplarniKorsat();
+
+// // // Kitobni o'chirish
+// // // kutubxona.kitapSil("Kitob 2");
+
+// // // Yangilangan kitob ro'yxatini chiqarish
+// // // kutubxona.kitaplarniKorsat();
+
+// class Libraries {
+//   name = '';  
+//   rate ;
+//   address ;
+
+//   constructor(name,rate,address){
+//     this.name = name
+//     this.rate = rate
+//     this.address = address
+//   }
+  
+// }
+
+// const listOfLibraries = [
+//   new Libraries('Oxford library', 1, 'Oxford city'),
+//   new Libraries('Cambridge library', 2,  'Cambridge city')
+// ];
+
+// class Books extends Libraries {
+//   name = '';
+//   author  = ''
+//   bookedTime;
+//   id;
+  
+
+//   constructor(name,author,bookedTime, id) {
+//     super();
+//     this.name = name;
+//     this.author = author;
+//     this.bookedTime = bookedTime;
+//     this.id = id;
+   
+    
+//   }
+
+//   get getID () {
+//       return this.id;
+//   }
+
+
+//   set bookedTime(newbookedTime){
+//     this.bookedTime=newbookedTime
+//   }
+
+ 
+//   calcRent(value){
+//   const time = new Date() ;
+//   const today  = time.getDate();  
+//   return (today - value)*5000;
+  
+// }
+
+//   static deleteBook(allBooks, id) {
+//     const index = allBooks.findIndex(user => user.id === id);
+//     if (index !== -1) {
+//       allBooks.splice(index, 1);
+//     }
+//   }
+  
+// }
+
+// const books = [
+//   new Books('Men', 'Fatih Duman', 15, 1),
+//   new Books('Atom odatlar ', '+Jeyms Klir', 12, 2)
+// ];
+
+
+
+// // otasi - otgan darsda soralgandi shu osha payt qilolmagandim
+// console.log(listOfLibraries);
+
+
+// // getter
+// console.log(books[0].getID);
+
+
+// // setter
+// books[1].bookedTime = 10
+
+
+
+// // ijara pulini hisoblash
+// console.log(books[0].calcRent(books[0].bookedTime));
+
+
+
+
+
+// //  delete
+// Books.deleteBook(books, 1);  
+// console.log(books);
+
+
+// // -------
+
+
+// class Kutubxona {
+//   constructor(nomi, prise, author) {
+//     this.nomi = nomi;
+//     this.kitoblar = [];
+//     this.kitapZamanlari = [];
+//     this.bugun = new Date();
+//   }
+
+//   kitapEkle(kitap) {
+//     this.kitoblar.push(kitap);
+//     const teslimTarihi = new Date(this.bugun.getTime() + (3 * 24 * 60 * 60 * 1000)); // 3 kun keyingi sanasi
+//     this.kitapZamanlari.push({
+//       kitap: kitap,
+//       teslimTarihi: teslimTarihi.toISOString().split('T')[0],
+//       olibOlishSanasi: this.bugun.toISOString().split('T')[0] // Bugunlik sanasi
+//     });
+//   }
+
+//   kitapSil(kitap) {
+//     const indeks = this.kitoblar.findIndex((element) => element.kitap === kitap);
+//     if (indeks > -1) {
+//       this.kitoblar.splice(indeks, 1);
+//       this.kitapZamanlari.splice(indeks, 1);
+//     }
+//   }
+
+//   kitaplarniKorsat() {
+//     this.kitoblar.forEach((kitap, indeks) => {
+//       const zaman = this.kitapZamanlari[indeks];
+//       console.log(`${indeks + 1}. ${zaman.kitap} (Olingan: ${zaman.olibOlishSanasi}, Topshirilgan: ${zaman.teslimTarihi} )`);
+//     });
+//   }
+// }
+
+// const kutubxona = new Kutubxona("Namuna Kutubxonasi");
+
+// // Kitob qo'shish (3 kun keyingi sanasi bilan)
+// kutubxona.kitapEkle("Kitob 1");
+// // kutubxona.kitapEkle("Kitob 2");
+// kutubxona.kitapEkle("Kitob 3");
+
+// // Kitoblarni ro'yxatlash
+// kutubxona.kitaplarniKorsat();
+
+// // Kitobni o'chirish
+// // kutubxona.kitapSil("Kitob 2");
+
+// // Yangilangan kitob ro'yxatini chiqarish
+// // kutubxona.kitaplarniKorsat();
+
+
+
+class Kutubxona {
+  constructor(nom, manba, yil) {
+    this.nom = nom;
+    this.manba = manba;
+    this.yil = yil;
+    this.olishSanasi = null;
   }
 
-  set addContact(newContact) {
-    if (this.#contact.length < 10) {
-      newContact.id = Math.random() * 1000;
-      this.contact.push(newContact);
-    } else {
-      throw console.Error("Contactlar soni oshib ketdi");
-    }
+  kitobniOlish() {
+    const bugun = new Date();
+    this.olishSanasi = bugun;
+    console.log(`Kitob ${bugun.toDateString()} sanasida olingan.`);
   }
 
-  get getAllContact() {
-    return this.#contact;
-  }
-
-  set edit({ id, phoneNumber, name }) {
-    const newContact = this.#contact.filter((item) => item, id !== id);
-    const editedContac = this.#contact.find((contact) => contact.id === id);
-    editedContac.phoneNumber = phoneNumber;
-    editedContac.name = name;
-    this.#contact = [...newContact, editedContac];
+  qaytaribBerish() {
+    const qaytarishSanasi = new Date(this.olishSanasi);
+    qaytarishSanasi.setDate(qaytarishSanasi.getDate() + 3);
+    console.log(`Kitob ${qaytarishSanasi.toDateString()} sanasida qaytarilishi kerak.`);
   }
 }
 
-const user1 = new Student("muhammadiy", "99999999");
+const kutubxona = new Kutubxona();
 
-user1.addContact = {
-  name: "john1",
-  phoneNumber: "312525",
-};
-
-user1.addContact = {
-  name: "john2",
-  phoneNumber: "3123525",
-};
-
-user1.addContact = {
-  name: "john2",
-  phoneNumber: "3125425",
-};
-
-user1.edit = {
-  id: 4684453135463,
-  phoneNumber: "111",
-  name: "due",
-};
-console.log(user1.getAllContact);
+kutubxona.kitobniOlish();
+kutubxona.qaytaribBerish();
