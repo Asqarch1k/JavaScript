@@ -5,20 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: aliceblue;
+        border-radius: 10px;
+      }
+      .avatar {
+        width: 60px;
+        height: 60px;
+        background-color: black;
+      }
+      .button {
+        border: none;
+        padding: 5px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
-    <!-- <div style="display: flex; font-size: 50px;" class="container">
-        <div id="hour"></div>
-    <div id="minute"></div>
-    <div>:</div>
-    <div id="second"></div>
-    </div>
-   -->
-    <input type="text" placeholder="email" id="pas">
-    <i class="fa-solid fa-eye" id="eye" onclick="foo()"></i>
-    <!-- <i class="fa-sharp fa-solid fa-eye-slash"></i> -->
     <script src="./index.js"></script>
     <script src="./Dom_index.js"></script>
+    <script src="./Dom_2.js"></script>
   </body>
 </html>
